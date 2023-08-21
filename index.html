@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Information</title>
+    <style>
+        body {
+            font-family: Arial, scdcans-serif;
+            margin: 0;
+            paddcding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            animation: animateBackground 10s linear infinite;
+        }
+        @keyframes animateBackground {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .header {
+            color: #ffffff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .section {
+            border-top: 1px solid #ddd;
+            padding: 20px 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .details {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px 0;
+        }
+        
+        /* New Animations */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .rotate {
+            animation: rotate 2s linear infinite;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .scale {
+            animation: scale 2s ease-in-out infinite alternate;
+        }
+        @keyframes scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .bounce {
+            animation: bounce 1s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .color-change {
+            animation: colorChange 3s linear infinite;
+        }
+        @keyframes colorChange {
+            0% { color: #e74c3c; }
+            25% { color: #3498db; }
+            50% { color: #27ae60; }
+            75% { color: #e67e22; }
+            100% { color: #9b59b6; }
+        }
+        .home{
+            position: absolute;
+            top: 7%;
+            left: 7%;
+            transform: translate(-50%, -50%);
+            color: rgb(19, 14, 14);
+            font-size: 24px;
+            text-align: center;
+        }
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #btn {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        #btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class = "home">
+    <button id = "btn">HOME</button>
+</div>
+    <Script>
+    btn.addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+
+</Script>
+    <div class="container fade-in-up">
+        <div class="header rotate">Developer Information</div>
+        <div class="section bounce">
+            <h2 class="color-change">Developer Name: <span style="color: #e74c3c;">Parampreet Singh Marava</span></h2>
+        </div>
+        <div class="section scale">
+            <h2 class="color-change">From: <span style="color: #3498db;">India</span></h2>
+        </div>
+        <div class="section bounce">
+            <h2 class="color-change">Profession: <span style="color: #27ae60;">Programmer</span></h2>
+        </div>
+        <div class="details">
+            <h1 class="color-change">In-Depth Developer Information</h1>
+            <p>
+                My name is Parampreet, and I am 15 years old. I come from a middle-class family in Italy, although my origins trace back to India. My passion lies in coding, and I consider it more than just a hobby; it's a potential profession I'm excited to pursue. Through coding, I have found a way to express my creativity and problem-solving skills, and I hope to continue honing my abilities in this field to create a meaningful impact in the future.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
